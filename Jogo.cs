@@ -6,7 +6,7 @@ public class Jogo
 	//atributos de instancia
 
 	public int Pontuacao { get; set;} 
-	public int Linhas { get; set;}
+	private int Linhas { get; set;}
 	public int Nivel { get; set;}
 	public int Velocidade { get; set;}
 		
@@ -19,12 +19,12 @@ public class Jogo
 		this Velocidade = vel;
 	}
 	
-	public CalculaLinha()
+	private int CalculaLinha()
 	{
 		//Calcula a quantidade de linhas de acordo com as que o jogador deletou
 	}
 	
-	public AlteraNivel()
+	public int AlteraNivel()
 	{
 		//Altera o nivel atual de acordo com a pontuação do jogador
 	}

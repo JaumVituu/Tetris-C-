@@ -5,7 +5,7 @@ public class Painel
 {
 	public int Tamanho{ get;}
 	public int Posicao{ get; set;}
-	public const[] Teclas{ get;}
+	private const[] Teclas{ get;}
 	
 	public Painel(int size,int p,const[,] key){
 		this.Tamanho = size;
@@ -13,34 +13,34 @@ public class Painel
 		this Teclas = key;
 	}
 	
-	public static void IniciaJogo()
+	public static void IniciaPainel()
 	{
-		//limpa o painel
+		//redefine painel, nivel, linhas e pontuação
 	}
 	
-	public static void GeraPeca()
+	private static void GeraPeca()
 	{
 		//Gera uma peça
 	}
 	
 	public static int ApagaLinha()
 	{
-		//Apaga uma linha preenchidea no painel e retorna que apagou
+		//Apaga uma linha preenchida no painel e retorna que apagou
 	}
 	
-	public int MovimentaPeca()
+	public Vector2 MovimentaPeca()
 	{
 		// Altera a posição da peça, sendo esses movimentos o de cair infinitamente e os da ação do jogador. 
-		// Retorna o valor de p, que será utilizado para definir a posição da peça
+		// Retorna o valor de p, um Vector2 que contém os valores de x e y, que será utilizado para definir a movimentação da peça.
 	}
 	
-	public static void VerificaPeca()
+	private static void VerificaPeca()
 	{
 		// Verifica a posição da peça. Se ela está próxima a uma parede, não poderá se mover. 
 		// Se encostar no chão, a peça fica parada, e então, o GeraPeca() ocorre novamente.
 	}
 	
-	public static int Anima()
+	private static void Anima()
 	{
 		// Utiliza o atributo velocidade do Jogo para definir 
 		// o intervalo de frames em que a tecla irá cair automaticamente
@@ -48,7 +48,7 @@ public class Painel
 	
 	public static void GameOver()
 	{
-		//Fim de jogo, leva ao IniciaJogo() 
+		//Fim de jogo, dá ao usuário as opções de sair do jogo ou de reiniciar, que leva ao IniciaJogo() 
 	}
 	
 	
